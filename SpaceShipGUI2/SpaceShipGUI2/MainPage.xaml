@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="SpaceShipGUI2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpaceShipGUI2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height=" *"/>
+        </Grid.RowDefinitions>
+        <CommandBar VerticalAlignment ="Stretch" Grid.Row="0">
+            <AppBarButton Icon="Play" Label="AppBarButton" Tapped="PlayClicked"/>
+            <AppBarButton Icon= "Pause" Label= "AppBarButton" Tapped="PauseGame"/>
+        </CommandBar>
+        <Canvas Grid.Row ="1" x:Name="canvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FocusVisualPrimaryBrush="#FFF51D1D">
+            <TextBlock x:Name="txtIntro" Foreground="GreenYellow" Canvas.Left="197" Canvas.Top="173" TextWrapping="Wrap" Height="281" Width="850" FontSize="25" FontFamily="Agency FB" FocusVisualPrimaryBrush="#FF020301" SelectionHighlightColor="Black"><Run Text="UPON ENTERING A FOREIGN PLANET'S ATMOSPHERE YOU'VE ENCOUNTERED AN ASTERIOD BELT!"/><LineBreak/><Run/><LineBreak/><Run Text="USE THE ARROW KEYS TO AVOID THE ASTEROIDS."/><LineBreak/><Run/><LineBreak/><Run Text="USE THE SPACE BAR TO TELEPORT YOUR SHIP, BUT BE WARNED! YOUR TELEPORTATION COMPUTER IS FAULTY AND LOW ON BATTERY, IT WILL TAKE YOU ANYWHERE IN THE VACINITY ONLY ONCE!"/><LineBreak/><Run/><LineBreak/><Run Text="GOOD LUCK."/></TextBlock>
+            <TextBlock x:Name="txtDuration" Foreground="GreenYellow" Canvas.Left="42" Canvas.Top="28" Text="00:00" TextWrapping="Wrap" Height="39" Width="133"/>
+
+        </Canvas>
+        <TextBlock HorizontalAlignment="Left" Margin="56,0,0,0" Text="HEALTH" TextWrapping="Wrap" VerticalAlignment="Center" SelectionHighlightColor="Yellow" IsColorFontEnabled="True"/>
+    </Grid>
+</Page>
